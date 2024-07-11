@@ -29,6 +29,9 @@ class ClassComponent extends Component<ClassComponentProps, ClassComponentState>
         {/* adesso scrivere this.props. o this.state. ci darà suggerimenti coerenti, di quello che esiste effetivamente */}
         <h2 style={{ color: this.props.color }}>Componente a Classe{this.state.isLoading ? "..." : "!"}</h2>
         <p>{this.props.subtitle}</p>
+        {/* perché questo codice dinamico funzioni dovrai creare un file .env.local creando la chiave VITE_SECRET_KEY=valore_a_tua_scelta */}
+        <p>ENV: {import.meta.env.VITE_SECRET_KEY}</p>
+
         <Link to="/functional" className="btn btn-dark btn-sm">
           Vai al componente a Funzione
         </Link>
